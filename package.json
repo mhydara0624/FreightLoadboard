@@ -1,0 +1,24 @@
+{
+  "name": "freightloadboard",
+  "version": "1.0.0",
+  "description": "The trucking and freight industry is a multi-billion dollar industry. There are many players involved. With so many connections and transactions to be made there must be applications to help make the booking process frictionless. This application is a system for brokers to post loads from shippers and help drivers find and book loads.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhydara0624/FreightLoadboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhydara0624/FreightLoadboard/issues"
+  },
+  "homepage": "https://github.com/mhydara0624/FreightLoadboard#readme",
+  "dependencies": {
+    "pg": "^8.7.1",
+    "sequelize": "^6.7.0"
+  }
+}
