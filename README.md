@@ -8,3 +8,6 @@ The trucking and freight industry is a multi-billion dollar industry. There are 
 
 # Component Heirarchy Diagram
 <img src = "Images/CHD.png" />
+
+
+# Technologies Used
