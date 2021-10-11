@@ -4,7 +4,8 @@
   "description": "The trucking and freight industry is a multi-billion dollar industry. There are many players involved. With so many connections and transactions to be made there must be applications to help make the booking process frictionless. This application is a system for brokers to post loads from shippers and help drivers find and book loads.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,14 @@
   },
   "homepage": "https://github.com/mhydara0624/FreightLoadboard#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.13",
     "pg": "^8.7.1",
     "sequelize": "^6.7.0"
   }
