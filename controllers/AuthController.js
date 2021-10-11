@@ -29,16 +29,14 @@ const Login = async (req, res) => {
 
 const Register = async (req, res) => {
   try {
-    const { email, password, name, is_renter, is_owner, picture } = req.body
+    const { email, password, company, broker } = req.body
     console.log(password)
     let password_digest = await middleware.hashPassword(password)
     const user = await User.create({
       email,
       password_digest,
-      name,
-      is_renter,
-      is_owner,
-      picture
+      company,
+      broker
     })
     res.send(user)
   } catch (error) {
@@ -57,7 +55,7 @@ const UpdatePassword = async (req, res) => {
         oldPassword
       ))
     ) {
-      let passwordDigest = await middleware.hashPassword(newPassword)
+      let password_digest = await middleware.hashPassword(newPassword)
       await user.update({ password_digest })
       return res.send({ status: 'Ok', payload: user })
     }
