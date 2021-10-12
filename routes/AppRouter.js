@@ -8,6 +8,6 @@ const LoadRouter = require('./LoadRouter')
 Router.use('/users', UserRouter)
 Router.use('/trucks', TruckRouter)
 Router.use('/auth', AuthRouter)
-Router.use('/bookings', LoadRouter)
+Router.use('/loads', LoadRouter)
 
 module.exports = Router
