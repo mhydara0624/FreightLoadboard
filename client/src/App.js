@@ -2,6 +2,8 @@ import './App.css'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { GetProfile, GetBrokerProfile } from './services/UserServices'
 import React, { useState, useEffect } from 'react'
+import SignIn from './pages/SignIn'
+import Register from './pages/Register'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -39,7 +41,34 @@ function App(props) {
   return (
     <div className="App">
       <header className="App-header">
-        <Router></Router>
+        <Router>
+          <Switch>
+            <Route
+              exact
+              path="/login"
+              component={(props) => (
+                <SignIn
+                  {...props}
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/register"
+              component={(props) => <Register {...props} />}
+            />
+            {user && authenticated && (
+              <ProtectedRoute
+                authenticated={authenticated}
+                user={user}
+                path={'/login'}
+                component={SignIn}
+              />
+            )}
+          </Switch>
+        </Router>
       </header>
     </div>
   )
