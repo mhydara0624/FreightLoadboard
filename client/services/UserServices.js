@@ -8,3 +8,12 @@ export const GetProfile = async (id) => {
     throw error
   }
 }
+
+export const GetBrokerProfile = async (id) => {
+  try {
+    const res = await Client.get(`/users/${id}/broker`)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
