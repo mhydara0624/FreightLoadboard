@@ -8,6 +8,7 @@ import SignIn from './pages/SignIn'
 import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
 import PostTruck from './pages/PostTruck'
+import EditTruck from './pages/EditTruck'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -78,6 +79,13 @@ function App(props) {
                   userInfo={userInfo}
                   setTrucks={setTrucks}
                 />
+              )}
+            />
+            <Route
+              exact
+              path="/profile/trucks/:id"
+              component={(props) => (
+                <EditTruck {...props} userInfo={userInfo} />
               )}
             />
             <Route

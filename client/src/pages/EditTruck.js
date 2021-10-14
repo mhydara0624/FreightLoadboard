@@ -1,7 +1,7 @@
 import { GetTrucksById, UpdateTruck } from '../services/TruckServices'
 import React, { useState, useEffect } from 'react'
 
-function EditCar(props) {
+function EditTruck(props) {
   const [updatedTruck, setUpdatedTruck] = useState({})
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function EditCar(props) {
                 />
                 <label for="model">Update model:</label>
                 <input
-                  onChange={handleChange}
+                  onChange={handleTruckChange}
                   type="model"
                   name="model"
                   value={updatedTruck.model}
@@ -73,7 +73,7 @@ function EditCar(props) {
                 </select>
                 <br></br>
                 <button className="edit_button" type="submit">
-                  Update Your Car
+                  Update Your Truck
                 </button>
               </form>
             </div>
@@ -84,4 +84,4 @@ function EditCar(props) {
   )
 }
 
-export default EditCar
+export default EditTruck
