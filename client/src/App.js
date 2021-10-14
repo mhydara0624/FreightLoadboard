@@ -1,9 +1,11 @@
 import './App.css'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { GetProfile, GetBrokerProfile } from './services/UserServices'
+import ProtectedRoute from './components/ProtectedRoute'
 import React, { useState, useEffect } from 'react'
 import SignIn from './pages/SignIn'
 import Register from './pages/Register'
+import { CheckSession } from './services/Auth'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -22,6 +24,17 @@ function App(props) {
     if (!user) return
     const data = await GetBrokerProfile(user.id)
     setUserInfo(data)
+  }
+
+  useEffect(() => {
+    getBrokerLoads()
+    getUserProfile()
+  }, [user])
+
+  const handleLogOut = () => {
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
   }
 
   const checkToken = async () => {
