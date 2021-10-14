@@ -1,3 +1,5 @@
+import Client from './api'
+
 export const PostNewTruck = async (data) => {
   try {
     const res = await Client.post('/trucks', data)
