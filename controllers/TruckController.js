@@ -1,4 +1,4 @@
-const { Truck } = require('../models')
+const { Truck, User } = require('../models')
 const { Op } = require('sequelize')
 
 const GetTrucks = async (req, res) => {
@@ -40,9 +40,21 @@ const DeleteTruck = async (req, res) => {
   }
 }
 
+const GetTruckProfile = async (req, res) => {
+  try {
+    const carAndBooks = await Truck.findByPk(req.params.id, {
+      include: [{ model: User }]
+    })
+    res.send(carAndBooks)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetTrucks,
   CreateTruck,
   UpdateTruck,
-  DeleteTruck
+  DeleteTruck,
+  GetTruckProfile
 }

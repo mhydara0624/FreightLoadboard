@@ -26,3 +26,13 @@ export const DeleteTruck = async (id) => {
     throw error
   }
 }
+
+export const GetTrucksById = async (id) => {
+  try {
+    const res = await Client.get(`/trucks/${id}`)
+    console.log(res.data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}

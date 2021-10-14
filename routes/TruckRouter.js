@@ -3,6 +3,7 @@ const middleware = require('../middleware')
 const router = require('express').Router()
 
 router.get('/', controller.GetTrucks)
+router.get('/:id', controller.GetTruckProfile)
 
 router.post(
   '/',
