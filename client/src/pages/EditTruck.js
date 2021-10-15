@@ -1,5 +1,6 @@
 import { GetTrucksById, UpdateTruck } from '../services/TruckServices'
 import React, { useState, useEffect } from 'react'
+import { withRouter, useHistory } from 'react-router-dom'
 
 function EditTruck(props) {
   const [updatedTruck, setUpdatedTruck] = useState({})
@@ -13,7 +14,7 @@ function EditTruck(props) {
     setUpdatedTruck({ ...updatedTruck, [e.target.name]: e.target.value })
   }
 
-  const handleUpdateSubmit = async (e) => {
+  const handleUpdateSubmit = async (e, history) => {
     e.preventDefault()
     const newUpdatedTruck = {
       make: updatedTruck.make,
@@ -21,11 +22,14 @@ function EditTruck(props) {
       year: parseInt(updatedTruck.year)
     }
 
-    const res = await UpdateTruck(props.match.params.id, newUpdatedTruck)
+    const res = await UpdateTruck(
+      props.match.params.id,
+      newUpdatedTruck,
+      history
+    )
     if (res.status === 200) {
       props.history.push('/profile')
     }
-    console.log(res)
   }
 
   return (
@@ -84,4 +88,4 @@ function EditTruck(props) {
   )
 }
 
-export default EditTruck
+export default withRouter(EditTruck)

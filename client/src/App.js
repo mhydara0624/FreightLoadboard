@@ -44,6 +44,7 @@ function App(props) {
     const res = await PostNewTruck(formData)
     setTrucks(...trucks, res.data)
     history.push('/profile')
+    window.location.reload()
   }
 
   const handleLogOut = () => {

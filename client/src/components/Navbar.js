@@ -12,6 +12,9 @@ function NavBar({ authenticated, user, handleLogOut, props }) {
         <NavLink to="/post-truck">
           <button className="host_button">Add Your Trucks</button>
         </NavLink>
+        <NavLink to="/post-load">
+          <button className="host_button">Post Your Loads</button>
+        </NavLink>
         <NavLink
           to="/profile"
           style={{ textDecoration: 'none', color: 'black' }}
