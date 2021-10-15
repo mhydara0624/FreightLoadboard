@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { GetProfile, GetBrokerProfile } from './services/UserServices'
 import { PostNewTruck } from './services/TruckServices'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -9,6 +9,9 @@ import Register from './pages/Register'
 import { CheckSession } from './services/Auth'
 import PostTruck from './pages/PostTruck'
 import EditTruck from './pages/EditTruck'
+import Profile from './pages/Profile'
+import Navbar from './components/Navbar'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -36,12 +39,11 @@ function App(props) {
     getUserProfile()
   }, [user])
 
-  const handleSubmit = async (e, formData) => {
+  const handleSubmit = async (e, formData, history) => {
     e.preventDefault()
     const res = await PostNewTruck(formData)
     setTrucks(...trucks, res.data)
-    props.history.push('/profile')
-    props.history.go('/profile')
+    history.push('/profile')
   }
 
   const handleLogOut = () => {
@@ -68,7 +70,26 @@ function App(props) {
     <div className="App">
       <header className="App-header">
         <Router>
+          <Navbar
+            authenticated={authenticated}
+            user={user}
+            handleLogOut={handleLogOut}
+            {...props}
+          />
           <Switch>
+            <Route
+              exact
+              path="/profile"
+              component={(props) => (
+                <Profile
+                  {...props}
+                  userInfo={userInfo}
+                  getUserProfile={getUserProfile}
+                  trucks={trucks}
+                />
+              )}
+            />
+
             <Route
               exact
               path="/post-truck"

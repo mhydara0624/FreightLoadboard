@@ -1,6 +1,7 @@
 import { withRouter } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import { DeleteTruck } from '../services/TruckServices'
+import React, { useEffect, useState } from 'react'
 
 function Profile(props) {
   const [userTrucks, setUserTrucks] = useState([])
@@ -31,15 +32,15 @@ function Profile(props) {
         </div>
         <div className="user_cars">
           <h1> Your Garage</h1>
-          {userTruckss && (
+          {userTrucks && (
             <div>
               {' '}
               {userTrucks.map((truck) => (
-                <div className="user_car_card" key={car.id}>
+                <div className="user_car_card" key={truck.id}>
                   <button
                     className="remove"
                     onClick={() => {
-                      onClick(car.id)
+                      onClick(truck.id)
                     }}
                     style={{ cursor: 'pointer' }}
                   >
@@ -50,11 +51,11 @@ function Profile(props) {
                     to={`/profile/trucks/${truck.id}`}
                     style={{ textDecoration: 'none' }}
                   >
-                    <button>Edit Your Listing!</button>
+                    <button>Edit Your Truck!</button>
                   </NavLink>
-                  <h3>
+                  <h2>
                     {truck.make} {truck.year} {truck.model}
-                  </h3>
+                  </h2>
                 </div>
               ))}
             </div>
