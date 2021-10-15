@@ -16,6 +16,7 @@ function App(props) {
   )
   const [user, setUser] = useState(null)
   const [userInfo, setUserInfo] = useState([])
+  const [brokerInfo, setBrokerInfo] = useState([])
   const [trucks, setTrucks] = useState([])
 
   const getUserProfile = async () => {
@@ -27,7 +28,7 @@ function App(props) {
   const getBrokerLoads = async () => {
     if (!user) return
     const data = await GetBrokerProfile(user.id)
-    setUserInfo(data)
+    setBrokerInfo(data)
   }
 
   useEffect(() => {

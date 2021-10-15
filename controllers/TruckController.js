@@ -34,7 +34,7 @@ const UpdateTruck = async (req, res) => {
 const DeleteTruck = async (req, res) => {
   try {
     await Truck.destroy({ where: { id: req.params.id } })
-    res.send({ msg: 'Car Deleted', payload: req.params.car_id, status: 'Ok' })
+    res.send({ msg: 'Truck Deleted', payload: req.params.id, status: 'Ok' })
   } catch (error) {
     throw error
   }
