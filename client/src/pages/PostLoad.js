@@ -64,7 +64,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="company"
               name="company"
-              value={formsData.distance}
+              value={formsData.company}
               required
             />
             <label for="phone">Phone:</label>

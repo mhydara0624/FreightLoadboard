@@ -1,3 +1,5 @@
+import Client from './api'
+
 export const PostNewLoad = async (data) => {
   try {
     const res = await Client.post('/loads', data)
