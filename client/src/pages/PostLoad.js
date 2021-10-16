@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom'
 
 function PostLoad(props) {
-  const [formData, setFormData] = useState({
+  const [formsData, setFormsData] = useState({
     pickup: '',
     drop: '',
     distance: '',
@@ -15,7 +15,7 @@ function PostLoad(props) {
   let history = useHistory()
 
   const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value })
+    setFormsData({ ...formsData, [event.target.name]: event.target.value })
   }
 
   return (
@@ -24,7 +24,7 @@ function PostLoad(props) {
         <div className="form_wrapper2">
           <h2 className="title_post_car">Add Your Load Info:</h2>
           <form
-            onSubmit={(e) => props.handleSubmit(e, formData, history)}
+            onSubmit={(e) => props.handleLoadSubmit(e, formsData, history)}
             className="post_car_form"
           >
             <label for="pickup">Pickup Location:</label>
@@ -32,7 +32,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="pickup"
               name="pickup"
-              value={formData.pickup}
+              value={formsData.pickup}
               required
             />
             <label for="drop">Drop Location:</label>
@@ -40,7 +40,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="drop"
               name="drop"
-              value={formData.drop}
+              value={formsData.drop}
               required
             />
             <label for="distance">Distance</label>
@@ -48,7 +48,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="distance"
               name="distance"
-              value={formData.distance}
+              value={formsData.distance}
               required
             />
             <label for="rate">Rate</label>
@@ -56,7 +56,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="rate"
               name="rate"
-              value={formData.rate}
+              value={formsData.rate}
               required
             />
             <label for="company">Company</label>
@@ -64,7 +64,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="company"
               name="company"
-              value={formData.distance}
+              value={formsData.distance}
               required
             />
             <label for="phone">Phone:</label>
@@ -72,7 +72,7 @@ function PostLoad(props) {
               onChange={handleChange}
               type="phone"
               name="phone"
-              value={formData.phone}
+              value={formsData.phone}
               required
             />
             <br></br>
