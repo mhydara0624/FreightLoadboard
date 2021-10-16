@@ -10,11 +10,13 @@ function EditTruck(props) {
     setUpdatedTruck(truck)
   }, [])
 
+  let history = useHistory()
+
   const handleTruckChange = (e) => {
     setUpdatedTruck({ ...updatedTruck, [e.target.name]: e.target.value })
   }
 
-  const handleUpdateSubmit = async (e, history) => {
+  const handleUpdateSubmit = async (e) => {
     e.preventDefault()
     const newUpdatedTruck = {
       make: updatedTruck.make,
@@ -22,13 +24,10 @@ function EditTruck(props) {
       year: parseInt(updatedTruck.year)
     }
 
-    const res = await UpdateTruck(
-      props.match.params.id,
-      newUpdatedTruck,
-      history
-    )
+    const res = await UpdateTruck(props.match.params.id, newUpdatedTruck)
     if (res.status === 200) {
-      props.history.push('/profile')
+      history.push('/profile')
+      window.location.reload()
     }
   }
 
