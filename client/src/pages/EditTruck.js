@@ -37,9 +37,10 @@ function EditTruck(props) {
         <div className="form_wrapper3">
           {updatedTruck && (
             <div>
-              <h3>{updatedTruck.make}</h3>
+              <h2>Make Your Changes</h2>
+              {/* <h3>{updatedTruck.make}</h3>
               <h3>{updatedTruck.model}</h3>
-              <h3>{updatedTruck.year}</h3>
+              <h3>{updatedTruck.year}</h3> */}
               <form className="edit_car_form" onSubmit={handleUpdateSubmit}>
                 <label for="make">Update make:</label>
                 <input

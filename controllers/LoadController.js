@@ -39,9 +39,21 @@ const DeleteLoad = async (req, res) => {
   }
 }
 
+const GetLoadProfile = async (req, res) => {
+  try {
+    const carAndBooks = await Load.findByPk(req.params.id, {
+      include: [{ model: User }]
+    })
+    res.send(carAndBooks)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetLoads,
   CreateLoad,
   UpdateLoad,
-  DeleteLoad
+  DeleteLoad,
+  GetLoadProfile
 }
