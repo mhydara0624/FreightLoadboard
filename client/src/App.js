@@ -16,6 +16,7 @@ import Profile from './pages/Profile'
 import Navbar from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import EditLoad from './pages/EditLoad'
+import Broker from './pages/Broker'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -91,6 +92,18 @@ function App(props) {
             {...props}
           />
           <Switch>
+            <Route
+              exact
+              path="/broker"
+              component={(props) => (
+                <Broker
+                  {...props}
+                  brokerInfo={brokerInfo}
+                  getBrokerLoads={getBrokerLoads}
+                  loads={loads}
+                />
+              )}
+            />
             <Route
               exact
               path="/profile"
