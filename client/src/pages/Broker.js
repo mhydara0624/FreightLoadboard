@@ -32,11 +32,11 @@ function Broker(props) {
         </div>
         <div className="user_cars">
           <h1> Your Loads</h1>
-          {userTrucks && (
+          {userLoads && (
             <div>
               {' '}
               {userLoads.map((load) => (
-                <div className="user_car_card" key={truck.id}>
+                <div className="user_car_card" key={load.id}>
                   <button
                     className="remove"
                     onClick={() => {

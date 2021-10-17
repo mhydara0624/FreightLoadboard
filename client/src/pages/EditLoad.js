@@ -39,7 +39,7 @@ function EditLoad(props) {
     <div className="edit_car">
       <div className="car_form1">
         <div className="form_wrapper3">
-          {updatedTruck && (
+          {updatedLoad && (
             <div>
               <h2>Edit Your Load</h2>
               <form className="edit_car_form" onSubmit={handleLoadSubmit}>

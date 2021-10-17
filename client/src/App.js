@@ -15,7 +15,6 @@ import EditLoad from './pages/EditLoad'
 import Profile from './pages/Profile'
 import Navbar from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import EditLoad from './pages/EditLoad'
 import Broker from './pages/Broker'
 
 function App(props) {

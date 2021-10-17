@@ -22,6 +22,12 @@ function NavBar({ authenticated, user, handleLogOut, props }) {
           Profile
         </NavLink>
         <NavLink
+          to="/broker"
+          style={{ textDecoration: 'none', color: 'black' }}
+        >
+          Broker
+        </NavLink>
+        <NavLink
           className="signout"
           onClick={handleLogOut}
           to="/"
