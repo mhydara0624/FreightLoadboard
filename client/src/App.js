@@ -11,9 +11,11 @@ import { CheckSession } from './services/Auth'
 import PostTruck from './pages/PostTruck'
 import EditTruck from './pages/EditTruck'
 import PostLoad from './pages/PostLoad'
+import EditLoad from './pages/EditLoad'
 import Profile from './pages/Profile'
 import Navbar from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import EditLoad from './pages/EditLoad'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -113,6 +115,11 @@ function App(props) {
                   setLoads={setLoads}
                 />
               )}
+            />
+            <Route
+              exact
+              path="/broker/loads/:id"
+              component={(props) => <EditLoad {...props} userInfo={userInfo} />}
             />
             <Route
               exact
