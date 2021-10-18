@@ -6,12 +6,12 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: space-around;
-  background: url('https://novalines.com/wp-content/uploads/2019/10/Semi-Truck-License-Plates.jpg');
+  background: url('https://www.desktopbackground.org/download/1920x1080/2015/05/12/946850_volvo-semi-truck-wallpapers-hd-wallpapers-on-picsfair-com_2048x1536_h.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  width: 100%;
+  height: 100%;
 }
 .form_wrapper {
   color: white;
@@ -35,7 +35,7 @@ form {
   align-items: center;
   background-image: url('https://www.topmarkfunding.com/wp-content/uploads/2019/10/Best-Semi-Trucks.jpg');
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 .title_signin {

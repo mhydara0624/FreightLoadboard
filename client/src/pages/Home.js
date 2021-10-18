@@ -11,17 +11,6 @@ import { GetLoads } from '../services/LoadServices'
 import { withRouter } from 'react-router-dom'
 
 function Home(props) {
-  // const [board, setBoard] = useState([])
-
-  // const getAllLoads = async () => {
-  //   const data = await GetLoads()
-  //   setBoard(data)
-  // }
-
-  // useEffect(() => {
-  //   getAllLoads()
-  // }, [])
-
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

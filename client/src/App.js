@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { GetProfile, GetBrokerProfile } from './services/UserServices'
 import { PostNewTruck } from './services/TruckServices'
-import { PostNewLoad } from './services/LoadServices'
+import { PostNewLoad, GetLoads } from './services/LoadServices'
 import ProtectedRoute from './components/ProtectedRoute'
 import React, { useState, useEffect } from 'react'
 import SignIn from './pages/SignIn'
@@ -27,7 +27,7 @@ function App(props) {
   const [brokerInfo, setBrokerInfo] = useState([])
   const [trucks, setTrucks] = useState([])
   const [loads, setLoads] = useState([])
-  // const [board, setBoard] = useState([])
+  const [board, setBoard] = useState([])
 
   const getUserProfile = async () => {
     if (!user) return
@@ -41,15 +41,15 @@ function App(props) {
     setBrokerInfo(data)
   }
 
-  // const getAllLoads = async () => {
-  //   const data = await GetLoads()
-  //   setBoard(data)
-  // }
+  const getAllLoads = async () => {
+    const data = await GetLoads()
+    setBoard(data)
+  }
 
   useEffect(() => {
     getBrokerLoads()
     getUserProfile()
-    // getAllLoads
+    getAllLoads()
   }, [user])
 
   const handleSubmit = async (e, formData, history) => {
@@ -102,7 +102,7 @@ function App(props) {
             <Route
               exact
               path="/"
-              component={(props) => <Home {...props} loads={loads} />}
+              component={(props) => <Home {...props} board={board} />}
             />
             <Route
               exact

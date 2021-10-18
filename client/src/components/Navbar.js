@@ -57,7 +57,9 @@ function NavBar({ authenticated, user, handleLogOut, props }) {
   )
   return (
     <div className="navBar">
-      <Link to="/">Home</Link>
+      <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+        Home
+      </Link>
 
       <div className="navBar_right">
         {authenticated && user ? authenticatedOptions : publicOptions}
