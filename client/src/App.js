@@ -16,6 +16,7 @@ import Profile from './pages/Profile'
 import Navbar from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Broker from './pages/Broker'
+import Home from './pages/Home'
 
 function App(props) {
   const [authenticated, toggleAuthenticated] = useState(
@@ -26,6 +27,7 @@ function App(props) {
   const [brokerInfo, setBrokerInfo] = useState([])
   const [trucks, setTrucks] = useState([])
   const [loads, setLoads] = useState([])
+  // const [board, setBoard] = useState([])
 
   const getUserProfile = async () => {
     if (!user) return
@@ -39,9 +41,15 @@ function App(props) {
     setBrokerInfo(data)
   }
 
+  // const getAllLoads = async () => {
+  //   const data = await GetLoads()
+  //   setBoard(data)
+  // }
+
   useEffect(() => {
     getBrokerLoads()
     getUserProfile()
+    // getAllLoads
   }, [user])
 
   const handleSubmit = async (e, formData, history) => {
@@ -91,6 +99,11 @@ function App(props) {
             {...props}
           />
           <Switch>
+            <Route
+              exact
+              path="/"
+              component={(props) => <Home {...props} loads={loads} />}
+            />
             <Route
               exact
               path="/broker"

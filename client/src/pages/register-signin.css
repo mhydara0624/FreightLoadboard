@@ -1,12 +1,12 @@
 form {
   border-radius: 5px;
-  padding: 20px;
+  padding: 30px;
 }
 .signin {
   display: flex;
   justify-content: space-around;
   align-items: space-around;
-  background: url('https://cdn.vox-cdn.com/thumbor/pFPJqa9EHA7na_GjDdjF0R1ys7E=/0x0:2040x1360/1820x1213/filters:focal(857x517:1183x843):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69564917/jbareham_180213_2301_0149.0.jpg');
+  background: url('https://novalines.com/wp-content/uploads/2019/10/Semi-Truck-License-Plates.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
@@ -18,7 +18,7 @@ form {
   background: rgba(0, 0, 0, 0.6);
   width: 35vw;
   height: auto;
-  margin-top: 185px;
+  margin-top: 180px;
   border-radius: 10px;
 }
 .form_wrapper3 {
@@ -32,11 +32,11 @@ form {
 .register {
   display: flex;
   justify-content: space-around;
-  align-items: space-around;
-  background-image: url('https://tesla-cdn.thron.com/delivery/public/image/tesla/d4f29128-35ad-4912-9282-32701225c77b/bvlatuR/std/1920x1080/lhd-interior-hero-desktop');
+  align-items: center;
+  background-image: url('https://www.topmarkfunding.com/wp-content/uploads/2019/10/Best-Semi-Trucks.jpg');
   position: fixed;
   width: 100vw;
-  height: 100vw;
+  height: 100%;
 }
 .title_signin {
   margin: 10px;

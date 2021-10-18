@@ -1,0 +1,89 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+.top1 {
+  background-image: url('../images/tesla-roadster-profile.jpeg');
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+.user_profile_top {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.line1 {
+  justify-content: center;
+  display: inline-flex;
+}
+.try1 {
+  justify-content: center;
+  display: flex;
+  padding-top: 60px;
+}
+.title1 {
+  color: white;
+}
+.profile_banner {
+  width: 100vw;
+  height: 50vh;
+}
+
+.avatar {
+  height: 100px !important;
+  width: 100px !important;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.user_profile_name {
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.user_cars > h1 {
+  color: black;
+}
+
+.user_car_card {
+  display: flex;
+  flex-direction: column;
+  border: lightgray 1px solid;
+}
+
+.user_car_card > button {
+  position: relative;
+  top: 1px;
+  right: 1px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.user_car_card > h3 {
+  text-align: center;
+}
+
+.remove {
+  background-color: #b39f19;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  text-transform: inherit;
+  font-weight: 600;
+}
+
+.edit > button {
+  background-color: #b39f19;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  text-transform: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove:hover,
+.edit > button:hover {
+  background-color: white;
+  color: #b39f19;
+}

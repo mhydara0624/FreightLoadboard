@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom'
+import './post.css'
 
 function PostTruck(props) {
   const [formData, setFormData] = useState({

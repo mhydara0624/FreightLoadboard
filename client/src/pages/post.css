@@ -1,0 +1,41 @@
+.post_car {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+  background: url('https://wallpaperaccess.com/full/2723651.jpg');
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.form_wrapper2 {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  width: 34vw;
+  height: auto;
+  margin-top: 120px;
+  border-radius: 10px;
+}
+.title_post_car {
+  margin: 10px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.post_car_form {
+  display: flex;
+  flex-direction: column;
+  width: 30.5vw;
+}
+select {
+  width: 30.5vw;
+}
+.post_button {
+  width: 30.5vw;
+  background-color: #b39f19;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
