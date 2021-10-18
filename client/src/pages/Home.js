@@ -10,17 +10,17 @@ import React, { useState, useEffect } from 'react'
 import { GetLoads } from '../services/LoadServices'
 import { withRouter } from 'react-router-dom'
 
-function Home() {
-  const [board, setBoard] = useState([])
+function Home(props) {
+  // const [board, setBoard] = useState([])
 
-  const getAllLoads = async () => {
-    const data = await GetLoads()
-    setBoard(data)
-  }
+  // const getAllLoads = async () => {
+  //   const data = await GetLoads()
+  //   setBoard(data)
+  // }
 
-  useEffect(() => {
-    getAllLoads()
-  }, [])
+  // useEffect(() => {
+  //   getAllLoads()
+  // }, [])
 
   return (
     <TableContainer component={Paper}>
@@ -35,7 +35,7 @@ function Home() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {setBoard.map((load) => (
+          {props.board.map((load) => (
             <TableRow
               key={load.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
