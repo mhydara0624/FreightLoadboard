@@ -11,3 +11,13 @@ The trucking and freight industry is a multi-billion dollar industry. There are 
 
 
 # Technologies Used
+<li>  <a href = "https://trello.com/b/l7AGn3LY/freightloadboard">Trello </a>
+<li>  <a href = "https://github.com/mhydara0624/FreightLoadboard">GitHub </a>
+<li> Lucid Chart
+<li> Javascript
+<li> CSS
+<li> Material UI
+<li> PSQL
+<li> Express
+<li> React
+<li> Node
