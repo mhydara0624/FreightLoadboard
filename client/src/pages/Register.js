@@ -39,9 +39,9 @@ export default function Register(props) {
     <div className="register col">
       <div className="form_height">
         <div className="form_wrapper3">
-          <h2 className="title_register">
+          <h3 className="title_register">
             Register Now To Access Our Loads and Carriers!
-          </h2>
+          </h3>
           <form className="col" onSubmit={handleSubmit}>
             <div className="input-wrapper">
               <label htmlFor="email">Email</label>
