@@ -2,6 +2,8 @@
 
 The trucking and freight industry is a multi-billion dollar industry. There are many players involved. With so many connections and transactions to be made there must be applications to help make the booking process frictionless. This application is a system for brokers to post loads from shippers and help drivers find and book loads.
 
+# The Loadboard
+<img src = "Images/home.png" />
 
 # ERD
 <img src = "Images/BrokerLoadBoard.png" />
@@ -33,5 +35,5 @@ The back end was made using postgresQL and sequelize. I utilized 3 models. The u
 </details>
 <details>
 <summary> Front-End</summary>
-The front end was made using React and using hooks useState and useEffect to manage state and display data. In the home page I used material UI basic table to implement the loadboard that shows all loads for a given board. 
+The front end was made using React and using hooks useState and useEffect to manage state and display data. In the home page I used material UI basic table to implement the loadboard that shows all loads for a given board. The styles implemented used a lot of backgrounmd images and opaque forms to give it a sleek professional look.
 </details>
