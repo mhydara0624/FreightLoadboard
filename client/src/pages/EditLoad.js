@@ -1,6 +1,7 @@
 import { GetLoadsById, UpdateLoad } from '../services/LoadServices'
 import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom'
+import './edit.css'
 
 function EditLoad(props) {
   const [updatedLoad, setUpdatedLoad] = useState({})

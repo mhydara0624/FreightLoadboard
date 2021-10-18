@@ -1,6 +1,7 @@
 import { GetTrucksById, UpdateTruck } from '../services/TruckServices'
 import React, { useState, useEffect } from 'react'
 import { withRouter, useHistory } from 'react-router-dom'
+import './edit.css'
 
 function EditTruck(props) {
   const [updatedTruck, setUpdatedTruck] = useState({})

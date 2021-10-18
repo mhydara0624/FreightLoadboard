@@ -2,6 +2,7 @@ import { withRouter } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import { DeleteTruck } from '../services/TruckServices'
 import React, { useEffect, useState } from 'react'
+import './profile.css'
 
 function Profile(props) {
   const [userTrucks, setUserTrucks] = useState([])

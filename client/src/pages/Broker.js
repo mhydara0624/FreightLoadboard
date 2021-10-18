@@ -2,6 +2,7 @@ import { withRouter } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import { DeleteLoad } from '../services/LoadServices'
 import React, { useEffect, useState } from 'react'
+import './profile.css'
 
 function Broker(props) {
   const [userLoads, setUserLoads] = useState([])

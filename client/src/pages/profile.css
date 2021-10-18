@@ -3,9 +3,9 @@
   flex-direction: column;
 }
 .top1 {
-  background-image: url('../images/tesla-roadster-profile.jpeg');
+  background-image: url('https://wallpaperaccess.com/full/2106277.jpg');
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-size: cover;
 }
 .user_profile_top {
@@ -47,7 +47,7 @@
 
 .user_car_card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: lightgray 1px solid;
 }
 
