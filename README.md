@@ -21,3 +21,7 @@ The trucking and freight industry is a multi-billion dollar industry. There are 
 <li> Express
 <li> React
 <li> Node
+
+# Getting Started
+
+This application is simple and easy to use. When you initially come to the page you can register and login. After logging in you will have the page open to the authenticated options and will be able to post loads and/or trucks. There is a profile page to manage your trucks and a broker page to manage loads. You are able to edit and delete listings as you please. There is full crud functionality on both the load and truck models. The home page shows a list of loads and contact information for the companies. However to truly become a part of the community you have to become a member.
