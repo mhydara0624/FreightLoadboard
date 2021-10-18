@@ -4,6 +4,7 @@ The trucking and freight industry is a multi-billion dollar industry. There are 
 
 # The Loadboard
 <img src = "Images/home.png" />
+<img src = "Images/signin.png" />
 
 # ERD
 <img src = "Images/BrokerLoadBoard.png" />
